@@ -1,0 +1,73 @@
+%==============================
+% Variables
+
+% Document
+\documentclass[12pt, a4paper]{scrartcl}
+
+% Author
+\newcommand{\forename}{Max}
+\newcommand{\surname}{Mustermann}
+\newcommand{\street}{Strasse}
+\newcommand{\housenumber}{123}
+\newcommand{\zip}{12345}
+\newcommand{\city}{Cityname}
+\newcommand{\matriculationNumber}{12345}
+\newcommand{\documentDate}{November 2022}
+
+% Document
+\newcommand{\documentTitle}{Title: Lorem ipsum dolor sit}
+\newcommand{\documentSubtitle}{subtitle: Lorem ipsum dolor sit} 
+
+% General
+\newcommand{\univercity}{Hochschulname}
+\newcommand{\faculty}{Faculty name}
+\newcommand{\major}{Wirtschafts\-informatik und digitale Medien}
+\newcommand{\semesterNumber}{6}
+\newcommand{\semesterSeason}{Wintersemester}
+
+
+
+%==============================
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[style=apa, sorting=nyt, url=true]{biblatex}
+\usepackage{csquotes}
+\usepackage{acronym}
+\usepackage[ngerman]{babel}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{setspace}
+
+%==============================
+
+% literature
+\addbibresource{literature/bibliography.bib}
+
+% Design
+\setmainfont{Arial}
+\onehalfspacing
+
+%==============================
+% Document
+\title{\documentTitle}
+\author{\forename\:\surname}
+\date{\dateOfWork}
+
+\begin{document}
+% title page
+\include{meta/CoverPage}
+% declaration of honor
+\include{meta/DeclarationOfHonor}
+% abbreviations
+
+% table of contents
+\tableofcontents
+\newpage
+
+% test content
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum \parencite[vgl.][]{source1}. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+% content
+\include{pages/Content}
+\end{document}
